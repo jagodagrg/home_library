@@ -5,7 +5,6 @@ from wtforms.validators import DataRequired
 
 
 class BookForm(FlaskForm):
-    id = StringField('id', validators=[DataRequired()])
     title = StringField('title', validators=[DataRequired()])
     author = StringField('author', validators=[DataRequired()])
     notes = StringField('notes')
