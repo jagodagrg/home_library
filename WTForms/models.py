@@ -33,7 +33,7 @@ class Books:
 
     def save_all(self):
         with open("books.json", "w") as f:
-            json.dump(self.books, f, indent=4, separators=(". ", " = "))
+            json.dump(self.books, f, indent=4, separators=(", ", " : "))
 
     def update(self, id, data):
         data.pop('csrf_token')
@@ -41,7 +41,8 @@ class Books:
         self.save_all()
 
     def show_to_be_sold(self):
-        self.to_be_sold = [book for book in self.all() if not book['to_be_kept']]
+        self.to_be_sold = [
+            book for book in self.all() if not book['to_be_kept']]
         return self.to_be_sold
 
     def show_unread(self):

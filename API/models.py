@@ -24,7 +24,7 @@ class Books:
 
     def save_all(self):
         with open("books.json", "w") as f:
-            json.dump(self.books, f, indent=4, separators=(". ", " = "))
+            json.dump(self.books, f, indent=4, separators=(", ", " : "))
 
     def update(self, id, data):
         book = self.get(id)
