@@ -3,6 +3,7 @@ from models import books
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "tralala"
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 
 @app.route("/api/v1/books/", methods=['GET'])
@@ -19,8 +20,8 @@ def create_book():
         'title': request.json['title'],
         'author': request.json['author'],
         'notes': request.json.get('notes', ""),
-        'read': False,
-        'to_be_kept': False
+        'read': request.json['read'],
+        'to_be_kept': request.json['to_be_kept']
     }
     books.create(book)
     return jsonify({'book': book}), 201

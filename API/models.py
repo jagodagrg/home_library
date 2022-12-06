@@ -32,27 +32,20 @@ class Books:
             index = self.books.index(book)
             self.books[index] = data
             self.save_all()
-            return True
-        return False
 
     def delete(self, id):
         book = self.get(id)
         if book:
             self.books.remove(book)
             self.save_all()
-            return True
-        return False
 
     def show_to_be_sold(self):
-        self.to_be_sold = []
-        [self.to_be_sold.append(book) for book in self.all()
-         if book['to_be_kept'] == False]
+        self.to_be_sold = [
+            book for book in self.all() if not book['to_be_kept']]
         return self.to_be_sold
 
     def show_unread(self):
-        self.unread = []
-        [self.unread.append(book) for book in self.all()
-         if book['read'] == False]
+        self.unread = [book for book in self.all() if not book['read']]
         return self.unread
 
 

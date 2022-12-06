@@ -1,0 +1,38 @@
+body {
+    font-family: Garamond;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('https://scontent-lga3-1.xx.fbcdn.net/v/t1.15752-9/317730517_1305252720051435_472862794425764111_n.jpg?stp=dst-jpg_s2048x2048&_nc_cat=106&ccb=1-7&_nc_sid=ae9488&_nc_ohc=yvSaWl-h1HIAX808n6k&_nc_ht=scontent-lga3-1.xx&oh=03_AdTMZ9j0VO4o1ORWBGFOHprZ6Arczz3qCDzHFGHKfM27Kw&oe=63B57F85');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%
+}
+h1 {
+    color: #0b4d0c;
+    font-size: 50px;
+}
+a {
+    color: #0b4d0c;
+    font-size: 40px;
+}
+table   {
+    font-size: 30px;
+    margin: 0 auto;
+}
+form   {
+    margin: 0 auto;
+}
+input {
+    text-align: center;
+    font-size: 30px;
+    color: #0e5521;
+    width: 140px;
+}
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc;
+    border-radius: 5px; 
+}
