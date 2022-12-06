@@ -3,7 +3,6 @@ from models import books
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "tralala"
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 
 
 @app.route("/api/v1/books/", methods=['GET'])
